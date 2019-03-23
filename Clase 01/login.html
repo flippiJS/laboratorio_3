@@ -64,10 +64,8 @@
             const contrasena = fData.fContrasena.value;
             const recuerda = fData.fRecuerda.value;
 
-            if (usuario !== "") {
-                alert(usuario);
-                return false;
-            }
+            if (usuario == "fran" && contrasena == "123") alert("Sesion iniciada");
+            else alert("Usuario o Contraseña incorrecta");
         }        
     </script>
 </head>
