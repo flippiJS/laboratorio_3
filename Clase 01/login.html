@@ -57,16 +57,19 @@
 
 
     <script>
+        window.onload = setearValoresPorDefecto;
+
+        function setearValoresPorDefecto() {
+            document.forms.form1.fUsuario.value = "Usuario";
+        }
+
         function validarForm() {
             const fData = document.forms.form1;
-
-            const usuario = fData.fUsuario.value;
-            const contrasena = fData.fContrasena.value;
-            const recuerda = fData.fRecuerda.value;
-
+            let usuario = fData.fUsuario.value;
+            let contrasena = fData.fContrasena.value;
             if (usuario == "fran" && contrasena == "123") alert("Sesion iniciada");
             else alert("Usuario o Contraseña incorrecta");
-        }        
+        }
     </script>
 </head>
 
