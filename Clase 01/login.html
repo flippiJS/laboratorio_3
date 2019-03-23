@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 20%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: auto;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        h2 {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+    </style>
+
+
+    <script>
+        function validarForm() {
+            const fData = document.forms.form1;
+
+            const usuario = fData.fUsuario.value;
+            const contrasena = fData.fContrasena.value;
+            const recuerda = fData.fRecuerda.value;
+
+            if (usuario !== "") {
+                alert(usuario);
+                return false;
+            }
+        }        
+    </script>
+</head>
+
+<body>
+    <h2>Login</h2>
+    <form method="GET" name="form1" onsubmit="return validarForm(this)">
+
+        <div class="container">
+            <label for="uname">
+                <b>Usuario:</b>
+            </label>
+            </br>
+            <input type="text" placeholder="Ingresar Usuario" name="fUsuario" required>
+            </br>
+            <label for="psw">
+                <b>Contraseña:</b>
+            </label>
+            </br>
+            <input type="password" placeholder="Ingresar Contraseña" name="fContrasena" required>
+            </br>
+            <label>
+                <input type="checkbox" checked="checked" name="fRecuerda"> Recordar usuario y contraseña
+            </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="submit">Enviar</button>
+            <button type="reset" class="cancelbtn">Limpiar</button>
+        </div>
+    </form>
+</body>
+
+</html>
