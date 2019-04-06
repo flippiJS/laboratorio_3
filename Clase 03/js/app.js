@@ -1,6 +1,7 @@
 var app = new function () {
     this.el = document.getElementById('tListado');
     this.personas = [];
+    this.mostrarAgregar = document.getElementById('tListado');
 
     this.ObtenerDatos = function () {
         var data = '';
@@ -31,6 +32,7 @@ var app = new function () {
             iApellido.value = '';
             // Refrescamos la tabla
             this.ObtenerDatos();
+            OcultarAgregar();
         }
     };
     this.Editar = function (item) {
@@ -66,4 +68,14 @@ app.ObtenerDatos();
 
 function LimpiarInputs() {
     document.getElementById('spoiler').style.display = 'none';
+}
+
+function OcultarAgregar() {
+    document.getElementById('iAgregar').style.display = 'none';
+    document.getElementById('btnAgregar').style.display = 'block';
+}
+
+function MostrarAgregar() {
+    document.getElementById('btnAgregar').style.display = 'none';
+    document.getElementById('iAgregar').style.display = 'block';
 }

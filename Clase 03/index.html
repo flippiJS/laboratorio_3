@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Ejemplo Grilla</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
     <div class="container">
-        <div class="jumbotron" style="width: 500px; background-color: #ccc">
+        <div class="jumbotron" id="iAgregar">
+            <button class="btn btn-default btnCerrar" onclick="OcultarAgregar()">X</button>
             <form action="javascript:void(0);" method="POST" onsubmit="app.Agregar()">
                 <label>Nombre</label></br>
                 <input class="form-control" id="iNombre" type="text" placeholder="Tu nombre..." /> </br>
@@ -15,7 +19,7 @@
                 <input class="form-control" id="iApellido" type="text" placeholder="Tu apellido..." />
                 <div class="row"></br>
                     <div class="col-md-7">
-                        <button class="btn btn-primary" type="submit" style="background-color: #45a049; border-color: #45a049">Guardar</button>
+                        <button class="btn btn-primary btnGuardar" type="submit">Guardar</button>
                         <button class="btn btn-default" type="reset">Limpiar</button>
                     </div>
                 </div>
@@ -23,6 +27,7 @@
         </div>
         <p></p>
         <div class="row">
+            <button class="btn btn-default" id="btnAgregar" onclick="MostrarAgregar()">Agregar Persona</button>
             <h3>Listado de personas</h3>
             <table class="table table-bordered table-striped table-condensed">
                 <thead>
