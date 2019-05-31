@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Parcial - Grilla materias</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div>
+        <div class="cargando" id="cargando">Cargando...&#8230;</div>
+        <div class="iPopUp" id="iPopUp">
+            <button class="btn btn-default btnCerrar" onclick="OcultarEditar()">X</button>
+            <form action="javascript:void(0);" method="POST">
+                <label>Nombre</label></br>
+                <input id="iNombre" type="text" /> </br>
+                <label>Cuatrimestre</label></br>
+                <select id="iCuatrimestre">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select></br>
+                <label>Turno</label></br>
+                <input type="radio" id="iMañana" name="nTurno" value="Mañana">Mañana<br>
+                <input type="radio" id="iNoche" name="nTurno" value="Noche"> Noche<br>
+                <label>Fecha de Final</label></br>
+                <input id="iFecha" type="date">
+                <div></br>
+                    <div>
+                        <button class="btnModificar" id="iBtnModificar" type="button">Modificar</button>
+                        <button class="btnEliminar" id="iBtnEliminar" type="button">Eliminar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p></p>
+        <div>
+            <h3>Listado de materias</h3>
+            <table id="materias">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Cuatrimestre</th>
+                        <th>Fecha de Final</th>
+                        <th>Turno</th>
+                    </tr>
+                </thead>
+                <tbody id="tListado">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
