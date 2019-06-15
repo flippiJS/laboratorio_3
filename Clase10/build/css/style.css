@@ -1,0 +1,31 @@
+.jumbotron {
+    display: none; 
+    position: fixed; 
+    top:25%; 
+    left: 25%;
+    width: 500px; 
+    background-color: "#ccc";
+    animation-name: aparecer;
+    animation-duration: 1s;
+}
+
+@keyframes aparecer {
+	from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btnGuardar {
+    background-color: #45a049;
+    border-color: #45a049
+}
+
+.btnCerrar{
+    position: absolute;
+    display: block;
+    right: 5px;
+    top: 5px;
+}

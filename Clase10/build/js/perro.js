@@ -11,6 +11,12 @@ var animal;
         Perro.prototype.hacerRuido = function () {
             return 'Guau';
         };
+        Perro.prototype.getNombre = function () {
+            return this.nombre;
+        };
+        Perro.prototype.getTipo = function () {
+            return this.constructor.name;
+        };
         return Perro;
     }());
     animal.Perro = Perro;

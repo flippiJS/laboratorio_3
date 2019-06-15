@@ -10,5 +10,11 @@ namespace animal {
         hacerRuido(): string {
             return 'Guau';
         }
+        getNombre(): string {
+            return  this.nombre;
+        }
+        getTipo(): string {
+            return this.constructor.name;
+        }                
     }
 }
